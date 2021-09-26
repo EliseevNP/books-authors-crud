@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  books-authors-crud-db:
+    image: postgres:12.3
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - '15432:5432'

@@ -1,0 +1,57 @@
+{
+  "name": "books-authors-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "npm run build && node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*' -e js,ts --exec 'ts-node' src/index.ts",
+    "db:migrate": "sequelize db:migrate",
+    "db:seed": "sequelize db:seed:all",
+    "db:migrate:undo": "sequelize db:migrate:undo",
+    "db:migrate:down": "sequelize db:migrate:undo:all",
+    "db:seed:undo": "sequelize db:seed:undo",
+    "db:seed:down": "sequelize db:seed:undo:all",
+    "lint": "eslint --ext .ts,.js ./src"
+  },
+  "dependencies": {
+    "@types/validator": "13.6.3",
+    "axios": "0.21.4",
+    "dotenv": "10.0.0",
+    "fastest-validator": "1.11.1",
+    "koa": "2.13.0",
+    "koa-bodyparser": "4.3.0",
+    "koa-router": "^10.1.1",
+    "pg": "8.7.1",
+    "sequelize": "6.6.2",
+    "sequelize-cli": "6.2.0",
+    "ts-node": "8.10.2",
+    "typescript": "3.9.6"
+  },
+  "devDependencies": {
+    "@types/koa": "2.11.3",
+    "@types/koa-bodyparser": "4.3.0",
+    "@types/koa-router": "7.4.1",
+    "@types/node": "14.0.20",
+    "@typescript-eslint/eslint-plugin": "4.15.0",
+    "@typescript-eslint/parser": "4.15.0",
+    "eslint": "7.19.0",
+    "eslint-config-airbnb-typescript": "12.3.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "fastest-validator-decorators": "1.2.1",
+    "nodemon": "2.0.4",
+    "sequelize-typescript": "2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EliseevNP/books-authors-crud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EliseevNP/books-authors-crud/issues"
+  },
+  "homepage": "https://github.com/EliseevNP/books-authors-crud#readme"
+}
